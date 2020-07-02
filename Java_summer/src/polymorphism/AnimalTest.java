@@ -1,5 +1,6 @@
 package polymorphism;
 
+import java.util.ArrayList;
 
 class Animal {
 	public void move() {
@@ -40,6 +41,19 @@ public class AnimalTest {
 		test.moveAniaml(hAnimal);
 		test.moveAniaml(tAnimal);
 		test.moveAniaml(eAnimal);
+		
+		System.out.println("========================");
+		
+		ArrayList<Animal> animalList = new ArrayList<Animal>();
+		
+		animalList.add(hAnimal);
+		animalList.add(tAnimal);
+		animalList.add(eAnimal);
+		
+		for (Animal animal: animalList) {
+			animal.move();
+		}
+		
 	}
 	
 	public void moveAniaml (Animal animal) {
