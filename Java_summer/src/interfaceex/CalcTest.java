@@ -24,6 +24,11 @@ public class CalcTest {
 				
 		//calc2.showInfo(); 할 수 없음 왜냐면 calc2는 Calc형으로 선언되었기 때문에 Calc안에 있는 메서드만 사용가능
 		
+		calc1.description();
+		
+		int[] arr = {1,2,3,4,5};
+		int sum = Calc.total(arr);
+		System.out.println(sum);
 	}
 
 }
