@@ -1,8 +1,10 @@
 package treeset;
 
+import java.util.Comparator;
+
 import treeset.Member;
 
-public class Member implements Comparable<Member> {
+public class Member implements Comparator<Member> {
 	
 	private int memberID;
 	private String memberName;
@@ -51,9 +53,10 @@ public class Member implements Comparable<Member> {
 		return false;
 	}
 
+
 	@Override
-	public int compareTo(Member member) {
-		return this.memberName.compareTo(member.getMemberName());
+	public int compare(Member member1, Member member2) {
+		return (member2.memberID - member1.memberID);
 	}
 	
 	
